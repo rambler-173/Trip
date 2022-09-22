@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <router-view/>
-    <tab-bar/>
+    <tab-bar v-if="!route.meta.hideTabbar" />
 
   </div>
 </template>
@@ -9,6 +9,9 @@
 <script setup>
 
 import TabBar from "@/components/tabBar/TabBar.vue"
+import { useRoute } from "vue-router"
+
+const route = useRoute()
 
 </script>
 
