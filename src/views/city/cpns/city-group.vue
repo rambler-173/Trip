@@ -46,6 +46,7 @@ const cityClick = (city) => {
 
   //将获取的数据传入仓库
   cityStore.currentCity = city
+  console.log(city)
 
   router.back()
 }
